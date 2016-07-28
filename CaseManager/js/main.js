@@ -1,26 +1,27 @@
 ﻿/// <reference path="../myPage.html" />
 /// <reference path="../pages/welcome.html" />
 // Your code here!
-(function () {
-    var caseManager = angular.module("caseManager", ["ngRoute"]);
-    caseManager.config(function ($routeProvider) {
-        $routeProvider
-    .when("/", {
-        templateUrl: "/pages/welcome.html"
-    })
-    .when("/login", {
-        templateUrl: "/pages/login.html"
-    })
-    .when("/page2", {
-        templateUrl: "/pages/page2.html"
-    })
-    .when("/page3", {
-        templateUrl: "/pages/page3.html"
-    })
-    .otherwise("/");
+window.caseManager = caseManager = angular.module("caseManager", ["ngRoute"]);
+caseManager.config(function ($routeProvider) {
+    $routeProvider
+.when("/", {
+    templateUrl: "/pages/welcome.html"
+})
+.when("/login", {
+    templateUrl: "/pages/login.html"
+})
+.when("/page2", {
+    templateUrl: "/pages/page2.html"
+})
+.when("/page3", {
+    templateUrl: "/pages/page3.html"
+})
+.otherwise("/");
 
-    })
-    caseManager.controller("root", function ($scope, $http) {
+});
+
+(function () {
+    caseManager.controller("rootController", function ($scope, $http) {
         $scope.clientId = 7563;
         $scope.key = 'yo7t6laKaVdH8Aet9Bc5hw((';
         var scopes={
@@ -32,7 +33,6 @@
         $scope.scope = scopes.read_inbox;
         $scope.redirect_uri = "https://stackexchange.com/oauth/login_success";
         var redirect_uri = "https://stackexchange.com/oauth/login_success";
-
 
     });
 

@@ -66,8 +66,10 @@
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
+    <Content Include="js\loginController.js" />
     <Content Include="js\main.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\Services\APIService.js" />
     <Content Include="libs\angular\angular-route.js" />
     <Content Include="libs\angular\angular.js" />
     <Content Include="libs\bootstrap\css\bootstrap-theme.css" />
